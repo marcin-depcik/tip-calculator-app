@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Tip calculator app</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <img src="./images/logo.svg" alt="logo" />
+        <div class="main-container">
+            <form>
+                <div class="input-section">
+                    <div class="bill-input">
+                        <label for="bill">Bill</label>
+                        <input type="text" id="bill" placeholder="0" maxlength="17" />
+                        <img src="./images/icon-dollar.svg" alt="icon-dollar" />
+                    </div>
+                    <div class="tip-amount">
+                        <label for="tip">Select Tip %</label>
+                        <button class="tip-btn" data-tip="5">5%</button>
+                        <button class="tip-btn" data-tip="10">10%</button>
+                        <button class="tip-btn" data-tip="15">15%</button>
+                        <button class="tip-btn" data-tip="25">25%</button>
+                        <button class="tip-btn" data-tip="50">50%</button>
+                        <input type="text" id="tip" placeholder="Custom" maxlength="3" />
+                    </div>
+                    <div class="people-number">
+                        <label for="people-number">Number of People</label>
+                        <input type="text" id="people-number" placeholder="0" maxlength="17" />
+                        <img src="./images/icon-person.svg" alt="icon-person" />
+                        <p>Can't be zero</p>
+                    </div>
+                </div>
+                <div class="result-section">
+                    <div class="text">
+                        <h4>Tip Amount<br /><span>/ person</span></h4>
+                        <div class="tip-result">$0.00</div>
+                        <h4>Total<br /><span>/ person</span></h4>
+                        <div class="total-result">$0.00</div>
+                    </div>
+                    <button type="button" class="split-btn">SPLIT</button>
+                    <button class="reset-btn" type="reset">RESET</button>
+                </div>
+            </form>
+        </div>
+
+        <script src="./app.js"></script>
+    </body>
+</html>

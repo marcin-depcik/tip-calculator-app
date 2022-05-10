@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+::after,
+::before,
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 20vh 1fr;
+    font-family: 'Space Mono', monospace;
+    background-color: hsl(185, 41%, 84%);
+}
+body > img {
+    width: 100px;
+    display: block;
+    align-self: center;
+    justify-self: center;
+}
+input {
+    width: 100%;
+    font-family: inherit;
+    font-size: 24px;
+    font-weight: 700;
+    padding: 5px;
+    padding-right: 1.25rem;
+    text-align: end;
+    border: none;
+    border-radius: 5px;
+    background-color: hsl(189, 41%, 97%);
+    color: hsl(186, 14%, 43%);
+    cursor: pointer;
+}
+input:focus {
+    color: hsl(183, 100%, 15%);
+    outline: hsl(172, 67%, 45%) solid 2px;
+}
+button {
+    cursor: pointer;
+}
+.main-container {
+    align-self: flex-start;
+    justify-self: center;
+    background-color: hsl(0, 0%, 100%);
+    height: 100%;
+    max-width: 700px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 2rem;
+    padding-top: 4rem;
+}
+.input-section {
+    color: hsl(186, 14%, 43%);
+    font-weight: 700;
+    margin-bottom: 4.5rem;
+}
+
+.bill-input {
+    position: relative;
+    margin-bottom: 4.5rem;
+}
+.bill-input label {
+    position: absolute;
+    top: -2rem;
+}
+.bill-input img {
+    position: absolute;
+    top: 50%;
+    left: 1.25rem;
+    transform: translate(0, -50%);
+}
+
+.tip-amount {
+    position: relative;
+    margin-bottom: 4.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 50px);
+    column-gap: 15px;
+    row-gap: 15px;
+}
+.tip-amount label {
+    position: absolute;
+    top: -2rem;
+}
+.tip-amount .tip-btn {
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 24px;
+    color: hsl(185, 41%, 84%);
+    background-color: hsl(183, 100%, 15%);
+    border: none;
+    border-radius: 5px;
+}
+.tip-amount .tip-btn.selected {
+    color: hsl(183, 100%, 15%);
+    background-color: hsl(172, 67%, 45%);
+}
+
+.people-number {
+    position: relative;
+}
+.people-number label {
+    position: absolute;
+    top: -2rem;
+}
+.people-number p {
+    position: absolute;
+    bottom: -1.5rem;
+    right: 0;
+    display: none;
+}
+.people-number img {
+    position: absolute;
+    top: 50%;
+    left: 1.25rem;
+    transform: translate(0, -50%);
+}
+.people-number.invalid input {
+    border: 2px solid rgb(255, 145, 123);
+}
+.people-number.invalid input:focus {
+    outline: none;
+}
+.people-number.invalid p {
+    display: block;
+    color: rgb(255, 145, 123);
+}
+
+.result-section {
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 10px;
+    padding: 2.5rem 1.25rem;
+    line-height: 1.25rem;
+}
+.result-section .text h4 {
+    color: hsl(185, 41%, 84%);
+}
+.result-section .text span {
+    color: hsl(186, 14%, 43%);
+    font-size: 0.8rem;
+}
+.result-section .text {
+    margin-bottom: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    row-gap: 1.5rem;
+}
+.result-section .text .tip-result,
+.result-section .text .total-result {
+    justify-self: end;
+    color: hsl(172, 67%, 45%);
+    font-size: 2.25rem;
+    font-weight: 700;
+}
+.result-section .split-btn,
+.result-section .reset-btn {
+    display: block;
+    width: 100%;
+    height: 50px;
+    margin-top: 1.25rem;
+    font-family: inherit;
+    color: hsl(183, 100%, 15%);
+    background-color: hsl(172, 67%, 45%);
+    font-weight: 700;
+    font-size: 24px;
+    border: none;
+    border-radius: 5px;
+}
+
+@media screen and (min-width: 750px) {
+    body {
+        display: grid;
+    }
+    .main-container {
+        padding: 2rem;
+        height: 500px;
+        width: 90vw;
+        max-width: 1170px;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+    }
+    .main-container form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 2rem;
+        height: 100%;
+    }
+    .tip-amount {
+        position: relative;
+        margin-bottom: 4.5rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: repeat(2, 50px);
+        column-gap: 15px;
+        row-gap: 15px;
+    }
+    .input-section {
+        margin-bottom: 0;
+        padding: 2.5rem 0;
+    }
+    .result-section {
+        width: 100%;
+        padding: 2.5rem 2rem;
+    }
+    .result-section .text {
+        margin-bottom: 8rem;
+    }
+}
