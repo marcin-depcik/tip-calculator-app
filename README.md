@@ -1,4 +1,4 @@
-# [Tip Calculator]()
+# [Tip Calculator](https://marcin-depcik.github.io/tip-calculator-app/)
 
 ## Table of contents
 
