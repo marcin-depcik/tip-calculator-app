@@ -96,5 +96,5 @@ function isInputValid(item) {
     }
 }
 function isInputPositiveNumber(item) {
-    return /^[0-9]+[0-9]*$/.test(item)
+    return /^(?:[1-9]\d*|0)?(?:\.\d+)?$/.test(item)
 }
